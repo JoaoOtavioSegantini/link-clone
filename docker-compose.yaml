@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  database:
+    image: postgres
+    volumes:
+      - "./.docker/dbdata:/var/lib/postgresql/data"
+    environment:
+      POSTGRES_USER: ${DATABASE_USER_LINKTREE}
+      POSTGRES_PASSWORD: ${LINKTREE_DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    restart: always
+
+  redis:
+    image: redis:alpine
+    expose:
+      - 6379
