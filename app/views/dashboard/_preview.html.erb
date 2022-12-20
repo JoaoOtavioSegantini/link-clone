@@ -1,0 +1,2 @@
+<h6>My Linktree: <%= link_to url_for([current_user, { only_path: false }]), user_path(current_user), target: "_blank" %></h6>
+                <%= content_tag(:iframe, "", src: user_path(current_user), title:"Preview", class:"preview-frame") %>

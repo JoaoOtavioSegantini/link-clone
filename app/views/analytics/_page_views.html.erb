@@ -1,0 +1,11 @@
+<div class="col-2"></div>
+<div class="col-8">
+  <div class="container">
+    <h2 class="text-center">Activity</h2>
+    <%= mixed_charts({theme: 'palette2', yaxis: {min: 0, forceNiceScale: true}}) do %>
+      <% column_chart(name: "Total Views", data: @daily_profile_views) %>
+      <% column_chart(name: "Link Clicks", data: @daily_link_clicks) %>
+    <% end %>
+  </div>
+</div>
+<div class="col-2"></div>

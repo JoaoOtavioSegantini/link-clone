@@ -1,0 +1,9 @@
+<div class="col-2"></div>
+<div class="col-8">
+  <div class="container">
+    <h2 class="text-center">Device Views</h2>
+    <%= @device_views %>
+    <%= donut_chart(@daily_views_by_device_type, legend: "left", theme: 'palette2') %>
+  </div>
+</div>
+<div class="col-2"></div>
