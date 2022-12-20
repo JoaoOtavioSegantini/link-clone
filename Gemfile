@@ -59,7 +59,6 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-  gem "dotenv-rails"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
@@ -73,3 +72,9 @@ group :test do
 end
 
 gem "devise", "~> 4.8"
+
+gem "simple_form", "~> 5.1"
+
+gem "dotenv-rails", "~> 2.8"
+
+gem "friendly_id", "~> 5.5"
