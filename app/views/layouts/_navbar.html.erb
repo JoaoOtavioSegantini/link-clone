@@ -12,11 +12,14 @@
         <li class="nav-item">
             <%= link_to "Appearance", appearance_path, class:"nav-link" %>
         </li>
+        <li class="nav-item">
+            <%= link_to "Analytics", analytics_path, class:"nav-link" %>
+        </li>
       </ul>
       <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            <%= current_user.username %>
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><%= link_to "My Account", edit_user_registration_path, class:"dropdown-item" %></li>

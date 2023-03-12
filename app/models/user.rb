@@ -29,6 +29,26 @@ class User < ApplicationRecord
     username_changed? || slug.blank?
   end
 
+  def get_daily_profile_views
+    daily_views = Ahoy::Event.where(user_id: id)
+                             .where(name: "Viewed Dashboard")
+   
+    daily_views.group_by_day(:time).count
+  end
+
+  def get_daily_link_clicks
+     daily_link_clicks = Ahoy::Event.where(user_id: id)
+                                    .where(name: 'Clicked Link')
+    daily_link_clicks.group_by_day(:time).count
+  end
+
+  def get_daily_views_by_device_type
+    device_views = Ahoy::Event.joins(:visit)
+                              .where('time > ? AND time < ?',
+                                     Date.today.last_month,
+                                     Date.today.end_of_day).group(:device_type)
+  end
+
   private
 
   def create_default_links

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   patch 'links/:id' => 'links#update', as: :links
 
   root 'dashboard#index'
+  get 'analytics', to: 'analytics#show'
 
   # Allows us to use user_path(user) to get the URL for a user's profile page
   get ':id', to: 'dashboard#show', as: :user

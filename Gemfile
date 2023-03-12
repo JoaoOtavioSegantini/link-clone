@@ -78,3 +78,9 @@ gem "simple_form", "~> 5.1"
 gem "dotenv-rails", "~> 2.8"
 
 gem "friendly_id", "~> 5.5"
+
+gem "apexcharts", "~> 0.2.0"
+
+gem "groupdate", "~> 6.1"
+
+gem "ahoy_matey", "~> 4.1"
